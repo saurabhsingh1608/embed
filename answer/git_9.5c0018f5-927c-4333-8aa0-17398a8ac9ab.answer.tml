@@ -1,0 +1,42 @@
+guid: 5c0018f5-927c-4333-8aa0-17398a8ac9ab
+answer:
+  name: git_9
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  search_query: "[item type] [region] [zip code]"
+  answer_columns:
+  - name: item type
+  - name: region
+  - name: zip code
+  table:
+    table_columns:
+    - column_id: item type
+      show_headline: false
+    - column_id: region
+      show_headline: false
+    - column_id: zip code
+      show_headline: false
+    ordered_column_ids:
+    - item type
+    - region
+    - zip code
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: SCATTER
+    chart_columns:
+    - column_id: item type
+    - column_id: region
+    - column_id: zip code
+    axis_configs:
+    - x:
+      - region
+      "y":
+      - zip code
+      category:
+      - item type
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"zip code\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"51285f28-8de7-4db4-9dbb-9d4b22a7f282\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"zip code\"],\"isOpposite\": false}},{\"id\": \"56aabd08-8fe6-46a3-b78e-a7a97509ba1f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\"]}}]}"
+  display_mode: TABLE_MODE
