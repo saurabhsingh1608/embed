@@ -17,13 +17,13 @@ on:
 env:
     # cs tool is command line library wrapping TS APIs
     # REF: ...
-    CS_TOOLS_THOUGHTSPOT__URL: ${{ secrets.THOUGHTSPOT_URL_DEV }}
-    CS_TOOLS_THOUGHTSPOT__USERNAME: ${{ secrets.THOUGHTSPOT_USERNAME_DEV }}
+    CS_TOOLS_THOUGHTSPOT__URL: ${{ secrets.THOUGHTSPOT_URL }}
+    CS_TOOLS_THOUGHTSPOT__USERNAME: ${{ secrets.THOUGHTSPOT_USERNAME }}
     CS_TOOLS_THOUGHTSPOT__SECRET_KEY: ${{ secrets.THOUGHTSPOT_SECRET_KEY_DEV }}
     CS_TOOLS_THOUGHTSPOT__DEFAULT_ORG: 1980614359
 
     # Paramaters for commit command
-    GITHUB_BRANCH_NAME: dev2
+    GITHUB_BRANCH_NAME: dev
     TS_OBJECT_TAG: ready
     TS_SOURCE_ORG_ID: 1980614359
     TS_COMMIT_MESSAGE: "Auto Generated this"
