@@ -1,0 +1,40 @@
+guid: e8a9e9cf-4042-4c38-875a-ae61e9bb08a9
+answer:
+  name: git_102
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  search_query: "[product] [SKU] [quantity purchased]"
+  answer_columns:
+  - name: SKU
+  - name: Total quantity purchased
+  - name: product
+  table:
+    table_columns:
+    - column_id: SKU
+      show_headline: false
+    - column_id: Total quantity purchased
+      show_headline: false
+    - column_id: product
+      show_headline: false
+    ordered_column_ids:
+    - product
+    - SKU
+    - Total quantity purchased
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: SKU
+    - column_id: Total quantity purchased
+    - column_id: product
+    axis_configs:
+    - x:
+      - SKU
+      "y":
+      - Total quantity purchased
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"product\",\"columnProperty\": {}},{\"columnId\": \"SKU\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9b256099-887b-4679-a437-2599a559a67a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"1d085d2e-c5fa-4b2a-bc8c-9b259a56aeeb\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"SKU\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total quantity purchased\",\"color\": \"#8C62F5\"}]}"
+  display_mode: TABLE_MODE
