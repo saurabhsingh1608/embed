@@ -31,7 +31,7 @@ jobs:
     # Command is checking if PR is merged and it is merged with approved label
     # REF: ...
     #if: github.event.pull_request.merged == true && github.event.review.state == 'approved'
-    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'produc'
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'prod'
     runs-on: ubuntu-latest
     steps:
     
