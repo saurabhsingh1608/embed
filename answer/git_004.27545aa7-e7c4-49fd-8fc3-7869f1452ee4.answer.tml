@@ -1,0 +1,50 @@
+guid: 27545aa7-e7c4-49fd-8fc3-7869f1452ee4
+answer:
+  name: git_004
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  search_query: "[quantity purchased] [item type] [state] [store] [product]"
+  answer_columns:
+  - name: Total quantity purchased
+  - name: item type
+  - name: product
+  - name: state
+  - name: store
+  table:
+    table_columns:
+    - column_id: Total quantity purchased
+      show_headline: false
+    - column_id: item type
+      show_headline: false
+    - column_id: product
+      show_headline: false
+    - column_id: state
+      show_headline: false
+    - column_id: store
+      show_headline: false
+    ordered_column_ids:
+    - item type
+    - state
+    - store
+    - product
+    - Total quantity purchased
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Total quantity purchased
+    - column_id: item type
+    - column_id: product
+    - column_id: state
+    - column_id: store
+    axis_configs:
+    - x:
+      - product
+      "y":
+      - Total quantity purchased
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"state\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"product\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ff7d6991-c9c3-4df4-921a-dedb2b1b66ee\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"977fd507-b814-47cc-bbcf-5738f1cf2e10\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"product\"]}}]}"
+  display_mode: TABLE_MODE
