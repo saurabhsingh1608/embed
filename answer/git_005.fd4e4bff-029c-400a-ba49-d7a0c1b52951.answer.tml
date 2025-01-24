@@ -1,0 +1,42 @@
+guid: fd4e4bff-029c-400a-ba49-d7a0c1b52951
+answer:
+  name: git_005
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  search_query: "[region] [date] [date].monthly [county]"
+  answer_columns:
+  - name: Month(date)
+  - name: county
+  - name: region
+  table:
+    table_columns:
+    - column_id: Month(date)
+      show_headline: false
+    - column_id: county
+      show_headline: false
+    - column_id: region
+      show_headline: false
+    ordered_column_ids:
+    - region
+    - Month(date)
+    - county
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: SCATTER
+    chart_columns:
+    - column_id: Month(date)
+    - column_id: county
+    - column_id: region
+    axis_configs:
+    - x:
+      - Month(date)
+      "y":
+      - county
+      category:
+      - region
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"county\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"be338dbf-b518-4ad3-b3a3-51e9c10fe02b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"county\"],\"isOpposite\": false}},{\"id\": \"5bb17411-be38-44cd-bc5c-58d6653aa8f5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}]}"
+  display_mode: TABLE_MODE
