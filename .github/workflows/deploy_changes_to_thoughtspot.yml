@@ -1,0 +1,52 @@
+# This workflow will triage after pull requests is merged to Prod Branch with Label "approved" 
+
+name: deploy_changes_to_thoughtspot
+
+# Control when Workflow will run
+on:
+  # Workflow get trigger after PR is merged to Prod branch
+  # REF: ....
+  #workflow_dispatch:
+  # pull_request:
+  #   types: [closed] 
+  pull_request:
+    types: [closed]
+  workflow_dispatch:
+
+env:
+    CS_TOOLS_THOUGHTSPOT__URL: ${{ secrets.THOUGHTSPOT_URL }}
+    CS_TOOLS_THOUGHTSPOT__USERNAME: ${{ secrets.THOUGHTSPOT_USERNAME }}
+    CS_TOOLS_THOUGHTSPOT__SECRET_KEY: ${{ secrets.THOUGHTSPOT_SECRET_KEY }}
+    CS_TOOLS_THOUGHTSPOT__DEFAULT_ORG: 1164222768
+
+    # Paramaters for commit command
+    GITHUB_BRANCH_NAME: product1
+    TS_DESTINATION_ORG_ID: 1164222768
+    
+
+jobs:
+  
+  testing_deploy_101:
+  
+    # Command is checking if PR is merged and it is merged with approved label
+    # REF: ...
+    #if: github.event.pull_request.merged == true && github.event.review.state == 'approved'
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'produc'
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: checking ${{ env.GITHUB_BRANCH_NAME }} branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.GITHUB_BRANCH_NAME }}
+          
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+
+      - name: install cs_tools
+        run: python -m pip install "cs_tools[cli] @ https://github.com/thoughtspot/cs_tools/archive/v1.5.10.zip"
+
+      - name: run the deploy command
+        run: "cs_tools tools git branches deploy --org ${{ env.TS_DESTINATION_ORG_ID }} --branch-name ${{ env.GITHUB_BRANCH_NAME }} --config ENV:"
