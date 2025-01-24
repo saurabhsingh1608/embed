@@ -21,7 +21,7 @@ env:
 
     # Paramaters for commit command
     GITHUB_BRANCH_NAME: prod
-    TS_DESTINATION_ORG_ID: 1164222768
+    #TS_DESTINATION_ORG_ID: 1164222768
     
 
 jobs:
