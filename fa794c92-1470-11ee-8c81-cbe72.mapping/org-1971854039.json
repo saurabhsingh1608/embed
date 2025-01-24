@@ -19,6 +19,11 @@
   "counter" : 0,
   "additionalMapping" : { }
 }, {
+  "originalGuid" : "782e715c-b67f-4f1f-8468-bca65309d2c1",
+  "mappedGuid" : "ac58c531-ff39-4a28-ba60-17115e17c5ed",
+  "counter" : 0,
+  "additionalMapping" : { }
+}, {
   "originalGuid" : "dd702e81-8807-41cd-be95-d68acb2cae13",
   "mappedGuid" : "2c1b32bf-05b9-4f1e-a00f-25a0fefaa6df",
   "counter" : 0,
