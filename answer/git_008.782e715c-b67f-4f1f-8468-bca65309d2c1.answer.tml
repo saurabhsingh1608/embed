@@ -1,0 +1,42 @@
+guid: 782e715c-b67f-4f1f-8468-bca65309d2c1
+answer:
+  name: git_008
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  search_query: "[date] [date].monthly [store] [item type]"
+  answer_columns:
+  - name: Month(date)
+  - name: item type
+  - name: store
+  table:
+    table_columns:
+    - column_id: Month(date)
+      show_headline: false
+    - column_id: item type
+      show_headline: false
+    - column_id: store
+      show_headline: false
+    ordered_column_ids:
+    - Month(date)
+    - store
+    - item type
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: SCATTER
+    chart_columns:
+    - column_id: Month(date)
+    - column_id: item type
+    - column_id: store
+    axis_configs:
+    - x:
+      - Month(date)
+      "y":
+      - item type
+      category:
+      - store
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"item type\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4668d3be-ad88-4c21-acf6-63e2626e3d3b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"item type\"],\"isOpposite\": false}},{\"id\": \"3f1adb3f-c29c-490d-bfe7-de0c6b79d109\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"item type\",\"color\": \"#8C62F5\"}]}"
+  display_mode: TABLE_MODE
