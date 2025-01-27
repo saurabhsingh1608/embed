@@ -4,8 +4,8 @@
 >
 >
 > <sub><b>Further reading <a href=https://developers.thoughtspot.com/docs/git-integration#_git_integration_overview>Git Integration Overview</a></b></sub>
->
-> > [!IMPORTANT]
+
+> [!IMPORTANT]
 > __A paired Git branch and ThoughtSpot Org are called an environment.__
 
 ---
