@@ -1,52 +1,45 @@
-# This workflow will triage after pull requests is merged to Prod Branch with Label "approved" 
+name: Deploy Changes
 
-name: deploy_changes_to_thoughtspot
-
-# Control when Workflow will run
 on:
-  # Workflow get trigger after PR is merged to Prod branch
-  # REF: ....
-  #workflow_dispatch:
-  # pull_request:
-  #   types: [closed] 
-  pull_request:
-    types: [closed]
+  # ALLOW TRIGGERING ACTION MANUALLY
   workflow_dispatch:
 
-env:
-    CS_TOOLS_THOUGHTSPOT__URL: ${{ secrets.THOUGHTSPOT_URL }}
-    CS_TOOLS_THOUGHTSPOT__USERNAME: ${{ secrets.THOUGHTSPOT_USERNAME }}
-    CS_TOOLS_THOUGHTSPOT__SECRET_KEY: ${{ secrets.THOUGHTSPOT_SECRET_KEY_PROD }}
-    CS_TOOLS_THOUGHTSPOT__DEFAULT_ORG: 1971854039
+  # AFTER A PULL REQUEST IS MERGED / CLOSED
+  pull_request:
+    types: [closed]
 
-    # Paramaters for commit command
-    GITHUB_BRANCH_NAME: prod
-    #TS_DESTINATION_ORG_ID: 1164222768
+
+env:
+    # CS TOOLS IS COMMAND LINE LIBRARY WRAPPING TS APIS
+    # https://thoughtspot.github.io/cs_tools/tools/git/
+    CS_TOOLS_VERSION: v1.5.13b1
+    CS_TOOLS_THOUGHTSPOT__URL: ${{ secrets.PRD_THOUGHTSPOT_URL }}
+    CS_TOOLS_THOUGHTSPOT__USERNAME: ${{ secrets.PRD_THOUGHTSPOT_USERNAME }}
+    CS_TOOLS_THOUGHTSPOT__SECRET_KEY: ${{ secrets.PRD_THOUGHTSPOT_SECRET_KEY }}
+
+    # THE NAME OF YOUR BRANCH / THOUGHTSPOT ENVIRONMENT.
+    TS_ENV_NAME: ts-prd
+    # THE ID OF THE ORG (THOUGHTSPOT ENVIRONMENT MATCHING ENV_NAME).
+    TS_DESTINATION_ORG_ID: 1971854039
     
 
 jobs:
-  
-  testing_deploy_101:
-  
-    # Command is checking if PR is merged and it is merged with approved label
-    # REF: ...
-    #if: github.event.pull_request.merged == true && github.event.review.state == 'approved'
-    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'prod'
+  run_deploy_api:
+    if: github.event.pull_request.merged && github.event.pull_request.base.ref == '${{ github.env.TS_ENV_NAME }}'
     runs-on: ubuntu-latest
     steps:
-    
-      - name: checking ${{ env.GITHUB_BRANCH_NAME }} branch
+      - name: checking ${{ env.TS_ENV_NAME }} branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ env.GITHUB_BRANCH_NAME }}
-          
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v4
+          ref: ${{ env.TS_ENV_NAME }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.12
+    
+      - name: Install CS Tools
+        run: pip install "cs_tools[cli] @ https://github.com/thoughtspot/cs_tools/archive/${{ env.CS_TOOLS_VERSION }}.zip"
 
-      - name: install cs_tools
-        run: python -m pip install "cs_tools[cli] @ https://github.com/thoughtspot/cs_tools/archive/v1.5.10.zip"
-
-      - name: run the deploy command
-        run: "cs_tools tools git branches deploy --branch-name ${{ env.GITHUB_BRANCH_NAME }} --config ENV:"
+      - name: Run the GIT DEPLOY command
+        run: "cs_tools tools git branches deploy --branch-name ${{ env.TS_ENV_NAME }} --config ENV:"
