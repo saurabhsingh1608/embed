@@ -1,0 +1,42 @@
+guid: bfca88de-2d85-4e2b-98c5-ed1cd66fe83e
+answer:
+  name: git_011
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  search_query: "[longitude] [SKU] [county]"
+  answer_columns:
+  - name: SKU
+  - name: county
+  - name: longitude
+  table:
+    table_columns:
+    - column_id: SKU
+      show_headline: false
+    - column_id: county
+      show_headline: false
+    - column_id: longitude
+      show_headline: false
+    ordered_column_ids:
+    - longitude
+    - SKU
+    - county
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: SCATTER
+    chart_columns:
+    - column_id: SKU
+    - column_id: county
+    - column_id: longitude
+    axis_configs:
+    - x:
+      - SKU
+      "y":
+      - county
+      category:
+      - longitude
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"longitude\",\"columnProperty\": {}},{\"columnId\": \"SKU\",\"columnProperty\": {}},{\"columnId\": \"county\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d19d8447-aaba-4038-a351-2be2ec5a82e4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"county\"],\"isOpposite\": false}},{\"id\": \"d23f226f-3abf-450f-b05e-e91b2a79a7a2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"SKU\"]}}]}"
+  display_mode: TABLE_MODE

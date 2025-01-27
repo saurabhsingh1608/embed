@@ -5,11 +5,12 @@ answer:
   - id: (Sample) Retail - Apparel
     name: (Sample) Retail - Apparel
     fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
-  search_query: "[item type] [region] [zip code] [quantity purchased]"
+  search_query: "[item type] [region] [zip code] [quantity purchased] [state]"
   answer_columns:
   - name: Total quantity purchased
   - name: item type
   - name: region
+  - name: state
   - name: zip code
   table:
     table_columns:
@@ -19,12 +20,15 @@ answer:
       show_headline: false
     - column_id: region
       show_headline: false
+    - column_id: state
+      show_headline: false
     - column_id: zip code
       show_headline: false
     ordered_column_ids:
     - item type
     - region
     - zip code
+    - state
     - Total quantity purchased
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
@@ -34,6 +38,7 @@ answer:
     - column_id: Total quantity purchased
     - column_id: item type
     - column_id: region
+    - column_id: state
     - column_id: zip code
     axis_configs:
     - x:
@@ -41,5 +46,5 @@ answer:
       "y":
       - Total quantity purchased
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"zip code\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a1f3af22-a18b-4d95-804d-cd6469864014\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"f895fb3d-a50d-4872-9978-cf0f6c6876a0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"zip code\"]}}]}"
-  display_mode: CHART_MODE
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"zip code\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a1f3af22-a18b-4d95-804d-cd6469864014\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"f895fb3d-a50d-4872-9978-cf0f6c6876a0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"zip code\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total quantity purchased\",\"color\": \"#F04152\"}]}"
+  display_mode: TABLE_MODE
