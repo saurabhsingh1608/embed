@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+
+  - name: Question or Feature Request
+    url: https://github.com/thoughtspot/ts-vcs-actions/discussions
+
+  - name: Read the Dev Tools EULA
+    url: https://github.com/thoughtspot/ts-vcs-actions/blob/master/LICENSE
+    about: These Dev Tools are provided as-is as an accomodation to you, the client.
