@@ -24,11 +24,10 @@ __ThoughtSpot__ [__requires an authenticated session__](https://developers.thoug
 
 ## How to Use / Guides
 
-  1. [How do I fetch changes made in ThoughtSpot?](info/commit.md)
-  2. [How do I open a Pull Request?](info/validate.md)
-  3. [How do I deploy changes to a new ThoughtSpot environment?](info/deploy.md)
-
+  1. [__How do I fetch changes from ThoughtSpot?__](info/commit.md)
+  2. [__How do I check my changes before pushing to a new environment?__](info/validate.md)
+  3. [__How do I deploy changes to a new ThoughtSpot environment?__](info/deploy.md)
 
 ## Want to contribute?
 
-See our [__Contributing guide__](CONTRIBUTING.md)! :heart:
+See our [__contributing guide__](CONTRIBUTING.md) :heart:
