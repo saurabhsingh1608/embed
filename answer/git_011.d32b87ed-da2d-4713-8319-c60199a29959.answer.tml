@@ -1,0 +1,35 @@
+guid: d32b87ed-da2d-4713-8319-c60199a29959
+answer:
+  name: git_011
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  search_query: "[region] [store]"
+  answer_columns:
+  - name: region
+  - name: store
+  table:
+    table_columns:
+    - column_id: region
+      show_headline: false
+    - column_id: store
+      show_headline: false
+    ordered_column_ids:
+    - region
+    - store
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: SCATTER
+    chart_columns:
+    - column_id: region
+    - column_id: store
+    axis_configs:
+    - x:
+      - region
+      "y":
+      - store
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b38d8be5-833e-4f37-b572-0fc071e8d5e5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"store\"],\"isOpposite\": false}},{\"id\": \"029bf7ce-d8a0-40d4-9a0d-69b6534100fc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\"]}}]}"
+  display_mode: TABLE_MODE
