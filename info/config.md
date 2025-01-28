@@ -86,4 +86,9 @@ On acceptance and merge of the PR, changes are deployed to the __ThoughtSpot__ O
 
 ## How should I set up my ThoughtSpot?
 
-...
+- Go to Develop tab of Org for which you want to create __Config__
+- In __Rest API__ Section, select [ __REST Playground v1__ ](https://try-everywhere.thoughtspot.cloud/v2/#/everywhere/api/rest/playgroundV2_0)
+- In __API ENDPOINT__ section, select version control where we need to create a config file.
+- Create a config for __Thoughtspot__ to login to __Github REPO__ where you want to do version control of __TS__ Objects.
+- Provide the [__Parameters__](https://developers.thoughtspot.com/docs/git-configuration#_request_parameters)
+- To get repository configuration information, select [__Search__ ](https://developers.thoughtspot.com/docs/git-configuration#_search_git_configuration)API 
