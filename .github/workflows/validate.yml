@@ -1,4 +1,4 @@
-name: Validate Changes
+name: Validate Changes test
 
 on:
   # ALLOW TRIGGERING ACTION MANUALLY
