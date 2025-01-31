@@ -1,4 +1,4 @@
-name: Validate Changes test
+name: Validate_Changes_@2
 
 on:
   # ALLOW TRIGGERING ACTION MANUALLY
@@ -23,9 +23,9 @@ env:
     # CS TOOLS IS COMMAND LINE LIBRARY WRAPPING TS APIS
     # https://thoughtspot.github.io/cs_tools/tools/git/
     CS_TOOLS_VERSION: v1.5.13b1
-    CS_TOOLS_THOUGHTSPOT__URL: ${{ secrets.DEV_THOUGHTSPOT_URL }}
-    CS_TOOLS_THOUGHTSPOT__USERNAME: ${{ secrets.DEV_THOUGHTSPOT_USERNAME }}
-    CS_TOOLS_THOUGHTSPOT__SECRET_KEY: ${{ secrets.DEV_THOUGHTSPOT_SECRET_KEY }}
+    CS_TOOLS_THOUGHTSPOT__URL: ${{ secrets.THOUGHTSPOT_URL }}
+    CS_TOOLS_THOUGHTSPOT__USERNAME: ${{ secrets.THOUGHTSPOT_USERNAME }}
+    CS_TOOLS_THOUGHTSPOT__SECRET_KEY: ${{ secrets.THOUGHTSPOT_SECRET_KEY_DEV }}
 
     # THE NAMES OF YOUR BRANCH / THOUGHTSPOT ENVIRONMENTS TO VALIDATE CHANGES BETWEEN.
     TS_SOURCE_ENV_NAME: ${{ github.event_name == 'workflow_dispatch' && inputs.source_branch || github.head_ref }}
