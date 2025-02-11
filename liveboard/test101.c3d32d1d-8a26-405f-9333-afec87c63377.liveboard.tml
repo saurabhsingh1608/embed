@@ -1,0 +1,49 @@
+guid: c3d32d1d-8a26-405f-9333-afec87c63377
+liveboard:
+  name: test101
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: test101
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "[Latency (us)] [Answer Book Name] [Browser Type]"
+      answer_columns:
+      - name: Answer Book Name
+      - name: Browser Type
+      - name: Total Latency (us)
+      table:
+        table_columns:
+        - column_id: Answer Book Name
+          show_headline: false
+        - column_id: Browser Type
+          show_headline: false
+        - column_id: Total Latency (us)
+          show_headline: false
+        ordered_column_ids:
+        - Answer Book Name
+        - Browser Type
+        - Total Latency (us)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Answer Book Name
+        - column_id: Browser Type
+        - column_id: Total Latency (us)
+        axis_configs:
+        - x:
+          - Browser Type
+          "y":
+          - Total Latency (us)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Browser Type\",\"columnProperty\": {}},{\"columnId\": \"Total Latency (us)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a227b8c4-2aba-4b49-a81a-c9a30ec7b228\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Latency (us)\"],\"isOpposite\": false}},{\"id\": \"98048d1e-49fb-478e-a686-ef1b4e40c2d6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Browser Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Latency (us)\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: a4f01c5c-e4c2-4ec5-a42c-c6dc83854cac
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
