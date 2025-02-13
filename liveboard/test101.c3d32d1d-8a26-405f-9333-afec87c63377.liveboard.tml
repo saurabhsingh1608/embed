@@ -9,10 +9,11 @@ liveboard:
       - id: "TS: BI Server"
         name: "TS: BI Server"
         fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
-      search_query: "[Latency (us)] [Answer Book Name] [Browser Type]"
+      search_query: "[Latency (us)] [Answer Book Name] [Browser Type] [Client Id]"
       answer_columns:
       - name: Answer Book Name
       - name: Browser Type
+      - name: Client Id
       - name: Total Latency (us)
       table:
         table_columns:
@@ -20,11 +21,14 @@ liveboard:
           show_headline: false
         - column_id: Browser Type
           show_headline: false
+        - column_id: Client Id
+          show_headline: false
         - column_id: Total Latency (us)
           show_headline: false
         ordered_column_ids:
         - Answer Book Name
         - Browser Type
+        - Client Id
         - Total Latency (us)
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
@@ -33,15 +37,16 @@ liveboard:
         chart_columns:
         - column_id: Answer Book Name
         - column_id: Browser Type
+        - column_id: Client Id
         - column_id: Total Latency (us)
         axis_configs:
         - x:
-          - Browser Type
+          - Client Id
           "y":
           - Total Latency (us)
         client_state: ""
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Answer Book Name\",\"columnProperty\": {}},{\"columnId\": \"Browser Type\",\"columnProperty\": {}},{\"columnId\": \"Total Latency (us)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a227b8c4-2aba-4b49-a81a-c9a30ec7b228\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Latency (us)\"],\"isOpposite\": false}},{\"id\": \"98048d1e-49fb-478e-a686-ef1b4e40c2d6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Browser Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Latency (us)\",\"color\": \"#8C62F5\"}]}"
-      display_mode: CHART_MODE
+      display_mode: TABLE_MODE
     viz_guid: a4f01c5c-e4c2-4ec5-a42c-c6dc83854cac
   layout:
     tiles:
