@@ -1,0 +1,40 @@
+guid: 09e87557-2c04-4a2b-8381-9fd55e7ff742
+answer:
+  name: test-102
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  search_query: "[region] [sales] [latitude]"
+  answer_columns:
+  - name: Total sales
+  - name: latitude
+  - name: region
+  table:
+    table_columns:
+    - column_id: Total sales
+      show_headline: false
+    - column_id: latitude
+      show_headline: false
+    - column_id: region
+      show_headline: false
+    ordered_column_ids:
+    - region
+    - latitude
+    - Total sales
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Total sales
+    - column_id: latitude
+    - column_id: region
+    axis_configs:
+    - x:
+      - latitude
+      "y":
+      - Total sales
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"latitude\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f384085b-26d0-45d1-a3ae-f60fcbb1fe7f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"0b2f85d0-8021-4eeb-8515-8af7b47d2db7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"latitude\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#FF8142\"}]}"
+  display_mode: CHART_MODE
