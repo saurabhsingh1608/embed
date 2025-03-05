@@ -50,3 +50,4 @@ jobs:
 
       - name: run the deploy command
         run: "cs_tools tools git branches deploy --branch ${{ env.GITHUB_BRANCH_NAME }} --config ENV:"
+        continue-on-error: true
