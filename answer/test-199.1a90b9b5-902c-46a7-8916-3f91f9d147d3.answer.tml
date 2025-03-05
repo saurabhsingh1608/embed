@@ -1,0 +1,35 @@
+guid: 1a90b9b5-902c-46a7-8916-3f91f9d147d3
+answer:
+  name: test-199
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+  search_query: "[SKU] [sales]"
+  answer_columns:
+  - name: SKU
+  - name: Total sales
+  table:
+    table_columns:
+    - column_id: SKU
+      show_headline: false
+    - column_id: Total sales
+      show_headline: false
+    ordered_column_ids:
+    - SKU
+    - Total sales
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: SKU
+    - column_id: Total sales
+    axis_configs:
+    - x:
+      - SKU
+      "y":
+      - Total sales
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"SKU\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9908396e-4a46-4836-9191-45057c0778ff\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"e9abf5d4-1233-48c8-8b48-dcde35b73e44\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"SKU\"]}}]}"
+  display_mode: TABLE_MODE
