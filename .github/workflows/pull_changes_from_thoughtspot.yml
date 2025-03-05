@@ -45,7 +45,7 @@ jobs:
           python-version: 3.12
 
       - name: install cs_tools
-        run: python -m pip install "cs_tools[cli] @ https://github.com/thoughtspot/cs_tools/archive/v1.5.10.zip"
+        run: python -m pip install "cs_tools[cli] @ https://github.com/thoughtspot/cs_tools/archive/v1.6.0.zip"
 
       - name: run the deploy command
         run: "cs_tools tools git branches commit --tag ${{ env.TS_OBJECT_TAG }} --comment ${{ env.TS_COMMIT_MESSAGE }} --org ${{ env.TS_SOURCE_ORG_ID }} --config ENV:"
